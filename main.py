@@ -1,12 +1,14 @@
 import saudacao, time
 
 while True:
-    saudacao.ola("\nDigite [hello] para prosseguir ou [quit] para sair.")
+    saudacao.ola("\nDigite [hello] ou [bye] para prosseguir ou [quit] para sair.")
     frase = input('\n> ').lower()
     time.sleep(1)
     try:
         if frase == 'hello':
-            saudacao.ola('Hello World!')
+            saudacao.ola('Hello, World!')
+        elif frase == 'bye':
+            saudacao.adeus('Goodbye, World!')
         elif frase == 'quit':
             saudacao.ola('Finalizando...')
             time.sleep(1)
